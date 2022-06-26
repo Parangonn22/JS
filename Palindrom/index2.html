@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel = "stylesheet" href="style.css">
+</head>
+<body>
+<form class="form">
+<h2 class="form_title">This script counts letters in the word</h2>
+<input type="text" id="w">
+<input type="button" value="Count" class="button" onclick="readValue()">
+    
+<p id = "p" class="p">
+Your word consist of:
+</p>
+    <script>
+function readValue(){
+  let word = document.getElementById("w").value; 
+  words = word.toLowerCase().split(``)
+    let Vowel = [`a`,`i`,`u`,`o`,`e`]
+    let Consonant = [`b`, `c`, `d`, `f`, `g`, `h`, `j`, `k`, `l`, `m`, `n`, `p`, `q`, `r`, `s`, `t`, `v`, `w`, `x`, `y`, `z`]
+    let VowelsCount = 0
+    let ConsonantCount = 0
+    words.forEach(el => {
+        if(Vowel.includes(el)) VowelsCount++
+        else if (Consonant.includes(el)) ConsonantCount++
+    });
+
+  document.getElementById("p").innerHTML= "Your word:"
+    +"<br>"
+    + "<b>" + word + "</b>"
+    + "<br>"
+    + "Consists of:"
+    + "<br>"
+    + VowelsCount + " vowels"
+    + "<br>"
+    + ConsonantCount + " consonants"
+    + "<br>"
+}
+    </script>
+
+<h2 class="form_title">and checks is word a palindrom</h2>
+    <input type="button" value="Is a palindrom" class="button" id="q" onclick="isPalindrom()">
+ 
+    <p id = "p1" class="p1">
+    Is your word palindrom?
+    </p>
+    <script>
+        function isPalindrom(){
+        let word = document.getElementById("w").value; 
+        let a = word.toLowerCase().split(``)
+        let b = a.reverse().join(``)
+             if (word.toLowerCase() == b){
+                document.getElementById("p1").innerHTML="<b>" + word + "</b>" + ` is palindrom`} 
+             else {
+                document.getElementById("p1").innerHTML="<b>" + word + "</b>" + ` is not palindrom`}
+     }
+    </script>
+  </form>
+</body>
+</html>

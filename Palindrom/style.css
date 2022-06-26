@@ -1,0 +1,45 @@
+body{
+    display: flex;
+    justify-content: normal;
+    align-items: center;
+    height: 100vh;
+}
+
+.form{
+    width: 300px;
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgb(224, 157, 157);
+    font-family: sans-serif;
+    letter-spacing: 1px;
+}
+
+.p{
+    width: 250px;
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgb(241, 232, 232);
+    font-family: sans-serif;
+    letter-spacing: 1px;
+
+}
+
+.p1{
+    width: 250px;
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgb(241, 229, 229);
+    font-family: sans-serif;
+    letter-spacing: 1px;
+
+}
+
+.button{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: whitesmoke;
+    background-color: blue;
+    font-weight: bold;
+}
+
